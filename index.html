@@ -7,7 +7,9 @@ layout: default
 		<p>{{ site.description }}</p>
 		<p>
 			<a class="btn btn-default" href="{{ '/blog/' | relative_url }}">
-				<i class="fa fa-book"></i> Blog
+			<i class="fa fa-book"></i>
+		<a href="{{ 'blog' | relative_url }}" class="btn btn-icon btn-default{% if uri[1] == 'blog' %} active{% endif %}" data-toggle="tooltip" data-placement="bottom" title="Blog">
+			<i class="fa fa-book"></i>
 				<i class="fa fa-user"></i> Sobre
 			</a>
 		</p>
