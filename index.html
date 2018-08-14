@@ -6,11 +6,46 @@ layout: default
 		<h1 class="big-text">{{ site.title }}</h1>
 		<p>{{ site.description }}</p>
 		<p>
-			<a class="btn btn-default" href="{{ '/blog/' | relative_url }}">
-			<i class="fa fa-book"></i>
+<div class="col-md-8 col-md-offset-2 text-center">
+		<a href="{{ '/' | relative_url }}">
+			<img src="{{ 'assets/img/logo-circle.png' | relative_url }}" class="img-responsive img-circle img-thumbnail logo" alt="{{ site.title }}">
+		</a>
+		<h1>{{ site.title }}</h1>
+		<hr>
+		<p>{{ site.description }}</p>
+		<hr style="width: 30%">
+		{% assign uri = page.url | remove: '.html' | split: '/'  %}
 		<a href="{{ 'blog' | relative_url }}" class="btn btn-icon btn-default{% if uri[1] == 'blog' %} active{% endif %}" data-toggle="tooltip" data-placement="bottom" title="Blog">
 			<i class="fa fa-book"></i>
-				<i class="fa fa-user"></i> Sobre
+		</a>
+		{% comment %}
+		<a href="{{ 'loja' | relative_url }}" class="btn btn-icon btn-default{% if uri[1] == 'produtos' %} active{% endif %}" data-toggle="tooltip" data-placement="bottom" title="Loja">
+			<i class="fa fa-shopping-cart"></i>
+		</a>
+		{% endcomment %}
+		<a href="{{ 'servicos' | relative_url }}" class="btn btn-icon btn-default{% if uri[1] == 'servicos' %} active{% endif %}" data-toggle="tooltip" data-placement="bottom" title="Serviços">
+			<i class="fa fa-gears"></i>
+		</a>
+		<a href="{{ 'sitemap' | relative_url }}" class="btn btn-icon btn-default{% if uri[1] == 'sitemap' %} active{% endif %}" data-toggle="tooltip" data-placement="bottom" title="Mapa do Site">
+			<i class="fa fa-sitemap"></i>
+		</a>
+		<button class="btn btn-icon btn-default" data-toggle="tooltip" data-placement="bottom" title="Pesquisar" data-target="#search-results" id="search-hero">
+			<i class="fa fa-search"></i>
+		</button>
+		
+		<a href="https://github.com/natanfelles" class="btn btn-icon btn-default" data-toggle="tooltip" data-placement="bottom" title="GitHub" target="_blank">
+			<i class="fa fa-github"></i>
+		</a>
+			
+	</div>
+</div>
+{% endcapture %}
+
+{% if site.env == 'development' %}
+	{{ hero }}
+{% else %}
+	{{ hero | normalize_whitespace }}
+{% endif %}
 			</a>
 		</p>
 	</div>
