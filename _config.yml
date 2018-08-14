@@ -1,12 +1,12 @@
 url: https://conquermedieval.github.io
 title: Nilsonlinux
-description: Bootstrap theme to host documentation. SEO optimized, Google CSE, Formspree and Disqus comments.
-keywords: Nilsonlinux, jekyll, jekyll-theme-docs
+description: Em desenvolvimento
+keywords: Nilsonlinux, jekyll, jekyll-theme-blog
 image: /assets/img/social.png
 email: nilsonlinux@gmail.com
 timezone: America/Sao_Paulo
 branch: master
-lang: en
+lang: pt_BR
 author:
   name: Nilsonlinux
   email: nilsonlinux@gmail.com
